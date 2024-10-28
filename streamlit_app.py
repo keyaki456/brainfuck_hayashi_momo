@@ -46,25 +46,26 @@ yuuhayashi=yuuhayashi.replace('妹ちゃん', '出')
 yuuhayashi=yuuhayashi.replace('護法2', '入')
 yuuhayashi=yuuhayashi.replace('アピールしてください', '恥')
 yuuhayashi=yuuhayashi.replace('こんもも', '終')
+st.write(yuuhayashi)
+
 
 if on:
     while cursol<=(len(yuuhayashi)-1):
-        time.sleep(0.2)
         if yuuhayashi[cursol]=="右":
             workinghayashi=workinghayashi+1
-            if workinghayashi==len(cells):workinghayashi=0
+            if workinghayashi==256:workinghayashi=0
             cursol=cursol+1
         elif yuuhayashi[cursol]=='左':
             workinghayashi=workinghayashi-1
-            if workinghayashi==-1:workinghayashi=len(cells)-1
+            if workinghayashi==-1:workinghayashi=255
             cursol=cursol+1
         elif yuuhayashi[cursol]=='足':
             cells[workinghayashi]=cells[workinghayashi]+1
-            if cells[workinghayashi]==len(aribayashiturple):cells[workinghayashi]=0
+            if cells[workinghayashi]==214:cells[workinghayashi]=0
             cursol=cursol+1
         elif yuuhayashi[cursol]=='引':
             cells[workinghayashi]=cells[workinghayashi]-1
-            if cells[workinghayashi]==-1:cells[workinghayashi]=len(aribayashiturple)-1
+            if cells[workinghayashi]==-1:cells[workinghayashi]=213
             cursol=cursol+1
         elif yuuhayashi[cursol]=='出':
             output=output+aribayashiturple[cells[workinghayashi]]
@@ -102,10 +103,7 @@ if on:
                     if tmpcount==0:break
                     cursol=cursol-1
                 cursol=cursol+1
-
-
-
-
+                
 
     st.write(cells)
     st.title("出力")
@@ -113,6 +111,7 @@ if on:
     st.write("(180秒後にもう一周します)")
     time.sleep(180)
     cells=[0] * 256
+
 
 
 
