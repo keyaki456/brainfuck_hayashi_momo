@@ -81,13 +81,11 @@ if on:
             cursol=cursol+1
         elif yuuhayashi[cursol]=='恥':
             if cells[workinghayashi]==0:
-                cursol=cursol+1
                 tmpcount=1
-                for p in range(cursol,len(yuuhayashi)):
+                while tmpcount>0 and cursol<=(len(yuuhayashi)-1):
+                    cursol=cursol+1
                     if yuuhayashi[cursol]=='恥':tmpcount=tmpcount+1
                     if yuuhayashi[cursol]=='終':tmpcount=tmpcount-1
-                    if tmpcount==0:break
-                    cursol=cursol+1
                 cursol=cursol+1
             else:
                 cursol=cursol+1
@@ -97,13 +95,13 @@ if on:
             else:
                 cursol=cursol-1
                 tmpcount=1
-                for p in range(cursol,0,-1):
+                while tmpcount>0 and cursol>=0:
+                    cursol=cursol-1
                     if yuuhayashi[cursol]=='終':tmpcount=tmpcount+1
                     if yuuhayashi[cursol]=='恥':tmpcount=tmpcount-1
-                    if tmpcount==0:break
-                    cursol=cursol-1
                 cursol=cursol+1
                 
+
 
     st.write(cells)
     st.title("出力")
