@@ -74,14 +74,8 @@ if on:
 
     st.write(cells)
     st.write(cells[9])
+    st.write("出力")
     st.write(output)
     st.write("180秒後にもう一周します")
     time.sleep(180)
     cells=[0] * 256
-
-
-
-
-st.write('デバッグエリア')
-st.write(text)
-st.write(yuuhayashi)
