@@ -46,7 +46,6 @@ yuuhayashi=yuuhayashi.replace('妹ちゃん', '出')
 yuuhayashi=yuuhayashi.replace('護法2', '入')
 yuuhayashi=yuuhayashi.replace('アピールしてください', '恥')
 yuuhayashi=yuuhayashi.replace('こんもも', '終')
-st.write(yuuhayashi)
 
 if on:
     while cursol<=(len(yuuhayashi)-1):
