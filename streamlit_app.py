@@ -49,7 +49,7 @@ yuuhayashi=yuuhayashi.replace('こんもも', '終')
 
 if on:
     while cursol<=(len(yuuhayashi)-1):
-        time.sleep(0.1)
+        time.sleep(0.2)
         if yuuhayashi[cursol]=="右":
             workinghayashi=workinghayashi+1
             if workinghayashi==len(aribayashiturple):workinghayashi=0
