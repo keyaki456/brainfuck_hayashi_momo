@@ -1,15 +1,22 @@
 import streamlit as st
 
 st.title("BrainFuck林もも")
-yuuhayashi = st.text_input("Your BrainFuck林もも here", "ママでちゅよ")
+text = st.text_input("Your BrainFuck林もも here", "ママでちゅよ")
 
-on = st.toggle("←これがonの間、有林が働き続ける")
+on = st.toggle("←runボタン。これがonの間、有林が働き続ける。")
 
-
-a=0
+yuuhayashi=text
 if on:
-    st.write("Feature activated!")
-    a=a+1
+    yuuhayashi=yuuhayashi.replace('ママでちゅよ', '7')
+    yuuhayashi=yuuhayashi.replace('有林', '8')
+    yuuhayashi=yuuhayashi.replace('おっぱい', '+')
+    yuuhayashi=yuuhayashi.replace('ボロン', '-')
+    yuuhayashi=yuuhayashi.replace('妹ちゃん', '.')
+    yuuhayashi=yuuhayashi.replace('護法2', ',')
+    yuuhayashi=yuuhayashi.replace('アピールしてください', '[')
+    yuuhayashi=yuuhayashi.replace('こんもも', ']')
 
 
-st.write(a)
+
+st.write(text)
+st.write(yuuhayashi)
