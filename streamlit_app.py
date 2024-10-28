@@ -51,30 +51,37 @@ if on:
         time.sleep(0.2)
         if yuuhayashi[cursol]=="右":
             workinghayashi=workinghayashi+1
-            if workinghayashi==214:workinghayashi=0
+            if workinghayashi==len(aribayashiturple):workinghayashi=0
             cursol=cursol+1
         elif yuuhayashi[cursol]=='左':
             workinghayashi=workinghayashi-1
-            if workinghayashi==-1:workinghayashi=213
+            if workinghayashi==-1:workinghayashi=len(aribayashiturple)-1
             cursol=cursol+1
         elif yuuhayashi[cursol]=='足':
             cells[workinghayashi]=cells[workinghayashi]+1
-            if cells[workinghayashi]==214:cells[workinghayashi]=0
+            if cells[workinghayashi]==len(aribayashiturple):cells[workinghayashi]=0
             cursol=cursol+1
         elif yuuhayashi[cursol]=='引':
             cells[workinghayashi]=cells[workinghayashi]-1
-            if cells[workinghayashi]==-1:cells[workinghayashi]=213
+            if cells[workinghayashi]==-1:cells[workinghayashi]=len(aribayashiturple)-1
             cursol=cursol+1
         elif yuuhayashi[cursol]=='出':
             output=output+aribayashiturple[cells[workinghayashi]]
             cursol=cursol+1
         elif yuuhayashi[cursol]=='入':
+            for i in range(len(aribayashiturple)):
+                if aribayashiturple[i]==input[nyuuryokubayashi]:
+                    cells[workinghayashi]=i
+                    break
+            nyuuryokubayashi=nyuuryokubayashi+1
+            if nyuuryokubayashi>len(input)-1:
+                nyuuryokubayashi=len(input)-1
             cursol=cursol+1
 
-
+    st.write(yuuhayashi)
     st.write(cells)
     st.title("出力")
     st.write(output)
-    st.write("180秒後にもう一周します")
+    st.write("(180秒後にもう一周します)")
     time.sleep(180)
     cells=[0] * 256
