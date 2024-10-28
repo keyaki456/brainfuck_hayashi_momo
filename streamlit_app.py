@@ -51,19 +51,19 @@ if on:
         time.sleep(0.2)
         if yuuhayashi[cursol]=="右":
             workinghayashi=workinghayashi+1
-            if workinghayashi==256:workinghayashi=0
+            if workinghayashi==214:workinghayashi=0
             cursol=cursol+1
         elif yuuhayashi[cursol]=='左':
             workinghayashi=workinghayashi-1
-            if workinghayashi==-1:workinghayashi=255
+            if workinghayashi==-1:workinghayashi=213
             cursol=cursol+1
         elif yuuhayashi[cursol]=='足':
             cells[workinghayashi]=cells[workinghayashi]+1
-            if cells[workinghayashi]==256:cells[workinghayashi]=0
+            if cells[workinghayashi]==214:cells[workinghayashi]=0
             cursol=cursol+1
         elif yuuhayashi[cursol]=='引':
             cells[workinghayashi]=cells[workinghayashi]-1
-            if cells[workinghayashi]==-1:cells[workinghayashi]=255
+            if cells[workinghayashi]==-1:cells[workinghayashi]=213
             cursol=cursol+1
         elif yuuhayashi[cursol]=='出':
             output=output+aribayashiturple[cells[workinghayashi]]
