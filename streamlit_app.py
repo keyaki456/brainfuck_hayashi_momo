@@ -1,6 +1,15 @@
 import streamlit as st
 
-st.title("🎈 My new app")
-st.write(
-    "Let's start building! For help and inspiration, head over to [docs.streamlit.io](https://docs.streamlit.io/)."
-)
+st.title("BrainFuck林もも")
+yuuhayashi = st.text_input("Your BrainFuck林もも here", "ママでちゅよ")
+
+on = st.toggle("←これがonの間、有林が働き続ける")
+
+
+a=0
+if on:
+    st.write("Feature activated!")
+    a=a+1
+
+
+st.write(a)
