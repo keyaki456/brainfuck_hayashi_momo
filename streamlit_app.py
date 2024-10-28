@@ -66,6 +66,7 @@ if on:
             if cells[workinghayashi]==-1:cells[workinghayashi]=255
             cursol=cursol+1
         elif yuuhayashi[cursol]=='出':
+            output=output+aribayashiturple[cells[workinghayashi]]
             cursol=cursol+1
         elif yuuhayashi[cursol]=='入':
             cursol=cursol+1
