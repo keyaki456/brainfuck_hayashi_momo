@@ -46,9 +46,10 @@ yuuhayashi=yuuhayashi.replace('護法2', '入')
 yuuhayashi=yuuhayashi.replace('アピールしてください', '恥')
 yuuhayashi=yuuhayashi.replace('こんもも', '終')
 
+
 if on:
     while cursol<=(len(yuuhayashi)-1):
-        time.sleep(0.2)
+        time.sleep(0.1)
         if yuuhayashi[cursol]=="右":
             workinghayashi=workinghayashi+1
             if workinghayashi==len(aribayashiturple):workinghayashi=0
@@ -77,6 +78,21 @@ if on:
             if nyuuryokubayashi>len(input)-1:
                 nyuuryokubayashi=len(input)-1
             cursol=cursol+1
+        elif yuuhayashi[cursol]=='恥':
+            if cells[workinghayashi]==0:
+                while yuuhayashi[cursol]!="終" and cursol<=(len(yuuhayashi)-1):cursol=cursol+1
+                cursol=cursol+1
+            else:
+                cursol=cursol+1
+        elif yuuhayashi[cursol]=='終':
+            if cells[workinghayashi]==0:
+                cursol=cursol+1
+            else:
+                cursol=cursol+1
+
+
+
+
 
     st.write(yuuhayashi)
     st.write(cells)
@@ -85,3 +101,4 @@ if on:
     st.write("(180秒後にもう一周します)")
     time.sleep(180)
     cells=[0] * 256
+
