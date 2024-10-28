@@ -2,7 +2,7 @@ import streamlit as st
 import time
 
 st.title("BrainFuck林もも")
-text = st.text_input("Your BrainFuck林もも code here", "ママでちゅよおっぱいおっぱいボロンママでちゅよおっぱい")
+text = st.text_input("Your BrainFuck林もも code here", "おっぱいおっぱいおっぱいおっぱいおっぱいおっぱいおっぱいおっぱいおっぱいおっぱいおっぱいおっぱいおっぱいおっぱいおっぱいおっぱいおっぱい妹ちゃんボロンボロンボロン妹ちゃんおっぱいおっぱいおっぱいおっぱいおっぱいおっぱいおっぱい妹ちゃん妹ちゃんおっぱいおっぱいおっぱい妹ちゃん")
 input = st.text_input("標準入力(ありばや進数で入力してください)","外星人かわいい")
 
 on = st.toggle("←runボタン。これがonの間、有林が働き続ける。")
