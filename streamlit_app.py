@@ -50,7 +50,6 @@ yuuhayashi=yuuhayashi.replace('妹ちゃん', '出')
 yuuhayashi=yuuhayashi.replace('護法2', '入')
 yuuhayashi=yuuhayashi.replace('アピールしてください', '恥')
 yuuhayashi=yuuhayashi.replace('こんもも', '終')
-st.write(yuuhayashi)
 
 
 if on:
@@ -107,8 +106,6 @@ if on:
                 
 
 
-
-    st.write(cells)
     st.title("出力")
     st.write(output)
     st.write("(180秒後にもう一周します)")
