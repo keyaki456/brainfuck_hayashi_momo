@@ -3,7 +3,7 @@ import time
 
 st.title("BrainFuck林もも")
 text = st.text_input("Your BrainFuck林もも here", "ママでちゅよ")
-input = st.text_input("標準入力")
+input = st.text_input("標準入力(ありばや進数で入力してください)","2421")
 
 on = st.toggle("←runボタン。これがonの間、有林が働き続ける。")
 
