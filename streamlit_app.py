@@ -2,8 +2,8 @@ import streamlit as st
 import time
 
 st.title("BrainFuck林もも")
-text = st.text_input("Your BrainFuck林もも here", "ママでちゅよ")
-input = st.text_input("標準入力(ありばや進数で入力してください)","2421")
+text = st.text_input("Your BrainFuck林もも code here", "ママでちゅよおっぱいおっぱいボロンママでちゅよおっぱい")
+input = st.text_input("標準入力(ありばや進数で入力してください)","外星人かわいい")
 
 on = st.toggle("←runボタン。これがonの間、有林が働き続ける。")
 
@@ -54,4 +54,3 @@ if on:
 st.write('デバッグエリア')
 st.write(text)
 st.write(yuuhayashi)
-st.write(yuuhayashi[7])
