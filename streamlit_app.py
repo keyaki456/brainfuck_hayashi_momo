@@ -10,6 +10,8 @@ on = st.toggle("←runボタン。これがonの間、有林が働き続ける�
 cells = [0] * 256
 cursol=0
 workinghayashi=0
+nyuuryokubayashi=0
+output=""
 
 yuuhayashi=text
 yuuhayashi=yuuhayashi.replace('ママでちゅよ', '右')
@@ -40,10 +42,15 @@ if on:
             cells[workinghayashi]=cells[workinghayashi]-1
             if cells[workinghayashi]==-1:cells[workinghayashi]=255
             cursol=cursol+1
+        elif yuuhayashi[cursol]=='出':
+            cursol=cursol+1
+        elif yuuhayashi[cursol]=='入':
+            cursol=cursol+1
 
 
     st.write(cells)
     st.write(cells[9])
+    st.write(output)
     st.write("180秒後にもう一周します")
     time.sleep(180)
     cells=[0] * 256
