@@ -12,6 +12,7 @@ cursol=0
 workinghayashi=0
 nyuuryokubayashi=0
 output=""
+tmpcount=0
 
 aribayashiturple=("0","1","2","3","4","5","6","7","8","9",
                   "a","b","c","d","e","f","g","h","i","j",
@@ -52,11 +53,11 @@ if on:
         time.sleep(0.2)
         if yuuhayashi[cursol]=="右":
             workinghayashi=workinghayashi+1
-            if workinghayashi==len(aribayashiturple):workinghayashi=0
+            if workinghayashi==len(cells):workinghayashi=0
             cursol=cursol+1
         elif yuuhayashi[cursol]=='左':
             workinghayashi=workinghayashi-1
-            if workinghayashi==-1:workinghayashi=len(aribayashiturple)-1
+            if workinghayashi==-1:workinghayashi=len(cells)-1
             cursol=cursol+1
         elif yuuhayashi[cursol]=='足':
             cells[workinghayashi]=cells[workinghayashi]+1
@@ -80,7 +81,13 @@ if on:
             cursol=cursol+1
         elif yuuhayashi[cursol]=='恥':
             if cells[workinghayashi]==0:
-                while yuuhayashi[cursol]!="終" and cursol<=(len(yuuhayashi)-1):cursol=cursol+1
+                cursol=cursol+1
+                tmpcount=1
+                for p in range(cursol,len(yuuhayashi)):
+                    if yuuhayashi[cursol]=='恥':tmpcount=tmpcount+1
+                    if yuuhayashi[cursol]=='終':tmpcount=tmpcount-1
+                    if tmpcount==0:break
+                    cursol=cursol+1
                 cursol=cursol+1
             else:
                 cursol=cursol+1
@@ -88,7 +95,13 @@ if on:
             if cells[workinghayashi]==0:
                 cursol=cursol+1
             else:
-                while yuuhayashi[cursol]!="恥" and cursol>-1:cursol=cursol-1
+                cursol=cursol+1
+                tmpcount=1
+                for p in range(cursol,0,-1):
+                    if yuuhayashi[cursol]=='終':tmpcount=tmpcount+1
+                    if yuuhayashi[cursol]=='恥':tmpcount=tmpcount-1
+                    if tmpcount==0:break
+                    cursol=cursol+1
                 cursol=cursol+1
 
 
