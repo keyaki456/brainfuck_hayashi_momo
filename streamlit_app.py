@@ -13,25 +13,7 @@ workinghayashi=0
 nyuuryokubayashi=0
 output=""
 
-aribayashidict={1:"1",
-                2:"2",
-                3:"3",
-                4:"4",
-                5:"5",
-                6:"6",
-                7:"7",
-                8:"8",
-                9:"9",
-                10:"a",
-                11:"b",
-                12:"c",
-                13:"d",
-                14:"e",
-                15:"f",
-                16:"g",
-                17:"h",
-                18:"i",
-                19:"j"}
+aribayashiturple=()
 
 yuuhayashi=text
 yuuhayashi=yuuhayashi.replace('ママでちゅよ', '右')
