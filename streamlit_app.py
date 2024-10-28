@@ -88,6 +88,7 @@ if on:
             if cells[workinghayashi]==0:
                 cursol=cursol+1
             else:
+                while yuuhayashi[cursol]!="恥" and cursol>-1:cursol=cursol-1
                 cursol=cursol+1
 
 
