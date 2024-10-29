@@ -108,8 +108,7 @@ if on:
 
     st.title("出力")
     st.write(output)
-    st.write("(180秒後にもう一周します)")
-    time.sleep(180)
+    time.sleep(300)
     cells=[0] * 256
 
 
