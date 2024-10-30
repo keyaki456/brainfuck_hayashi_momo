@@ -54,6 +54,7 @@ yuuhayashi=yuuhayashi.replace('こんもも', '終')
 
 if on:
     while cursol<=(len(yuuhayashi)-1):
+        time.sleep(0.1)
         if yuuhayashi[cursol]=="右":
             workinghayashi=workinghayashi+1
             if workinghayashi==256:workinghayashi=0
@@ -104,6 +105,7 @@ if on:
                     if yuuhayashi[cursol]=='恥':tmpcount=tmpcount-1
                 cursol=cursol+1
                 
+
 
 
     st.title("出力")
